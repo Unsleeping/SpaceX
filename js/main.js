@@ -5,7 +5,9 @@ var instance = new vidbg('.video', {
     overlay: false, // Boolean to display the overlay or not
 });
 
-var rellax = new Rellax('.rocket');
+var rellax = new Rellax('.rocket', {
+    breakpoints: [576, 768, 1201]
+});
 if (document.body.clientWidth <= 576) {
     rellax.destroy();
 }
